@@ -1,2 +1,2 @@
 # IndieStudioCocos
-A C++ EPITECH project for mobile made with the cocos2d framework.
+The last project of the second year at EPITECH, Indie Studio. This project is a rework of the original project developped for Android and using cocos2d.
