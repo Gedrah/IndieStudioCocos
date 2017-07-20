@@ -5,20 +5,24 @@
 
 class HelloWorld : public cocos2d::Scene
 {
-public:
-    static cocos2d::Scene* createScene();
+ private: // variables
+  cocos2d::Sprite3D* sprite;
+  cocos2d::Vec3 spritePos;
+  cocos2d::Camera* camera;
+ public:
+  // main feature to create scene
+  static cocos2d::Scene* createScene();
+  virtual bool init() override;
 
-    virtual bool init();
-    
-    // a selector callback
-    void menuCloseCallback(cocos2d::Ref* pSender);
 
-    void setupCamera();
+  // functions that will
+  void setupCamera();
+  void setupCharacter();
+  void menuCloseCallback(cocos2d::Ref* pSender);
 
-    void setupCharacter();
-    
-    // implement the "static create()" method manually
-    CREATE_FUNC(HelloWorld);
+  void update(float) override;
+
+  CREATE_FUNC(HelloWorld);
 };
 
 #endif // __HELLOWORLD_SCENE_H__
