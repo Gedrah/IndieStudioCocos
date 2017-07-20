@@ -12,6 +12,10 @@ public:
     
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
+
+    void setupCamera();
+
+    void setupCharacter();
     
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
