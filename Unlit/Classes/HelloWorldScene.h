@@ -8,7 +8,9 @@ class HelloWorld : public cocos2d::Scene
  private: // variables
   cocos2d::Sprite3D* sprite;
   cocos2d::Vec3 spritePos;
+  cocos2d::Vec3 spriteDest;
   cocos2d::Camera* camera;
+  cocos2d::Vec2 clickPos;
  public:
   // main feature to create scene
   static cocos2d::Scene* createScene();
@@ -18,6 +20,7 @@ class HelloWorld : public cocos2d::Scene
   // functions that will
   void setupCamera();
   void setupCharacter();
+  void getClickPosition();
   void menuCloseCallback(cocos2d::Ref* pSender);
 
   void update(float) override;
